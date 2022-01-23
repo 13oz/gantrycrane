@@ -16,7 +16,7 @@ pipeline
             {
                 docker pull debian
                 grype debian:latest
-                docker rmi debian:latest
+                docker rmi debian
             }
         }
     }
