@@ -14,9 +14,9 @@ pipeline
         {
             steps
             {
-                docker pull debian
-                grype debian:latest
-                docker rmi debian
+                sh 'docker pull debian'
+                sh 'grype debian:latest'
+                sh 'docker rmi debian'
             }
         }
     }
