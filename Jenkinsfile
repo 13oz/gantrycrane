@@ -1,12 +1,13 @@
-pipeline
+pipeline 
 {
-    agent any
+    agent any 
+    stages 
     {
-        stage('Stage 1')
+        stage('Stage 1') 
         {
-            steps
+            steps 
             {
-                echo 'It works!'
+                echo 'Hello world!' 
             }
         }
     }
