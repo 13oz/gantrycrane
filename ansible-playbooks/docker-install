@@ -12,7 +12,7 @@
 
   - name: Update all installed packages
     dnf:
-      name: *
+      name: "*"
       state: latests
   
   - name: Install Docker packages
