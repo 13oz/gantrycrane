@@ -1,0 +1,25 @@
+# installing docker on centos host
+- name: Install Docker for CentOS Stream
+  hosts: 192.168.1.201
+  remote_user: root
+
+  tasks:
+  - name: Add docker repo
+    yum_repository: 
+      name: docker_ce
+      description: Docker repo
+      baseurl: https://download.docker.com/linux/centos/docker-ce.repo
+
+  - name: Update all installed packages
+    dnf:
+      name: *
+      state: latests
+  
+  - name: Install Docker packages
+    dnf:
+      name: 
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - docker-compose-plugin
+      state: latest
