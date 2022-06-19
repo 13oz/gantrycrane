@@ -35,3 +35,14 @@
         - containerd.io
         - docker-compose-plugin
       state: latest
+      disable_gpg_check: yes
+  
+  - name: Enable Docker daemon
+    ansible.builtin.systemd:
+      name: docker
+      enabled: yes
+  
+  - name: Start Docker daemon
+    ansible.builtin.systemd:
+      name: docker
+      state: started
