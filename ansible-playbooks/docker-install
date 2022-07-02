@@ -1,6 +1,6 @@
 # installing docker on centos host
 - name: Install Docker for CentOS Stream
-  hosts: 192.168.1.201
+  hosts: 192.168.100.111
   remote_user: root
 
   tasks:

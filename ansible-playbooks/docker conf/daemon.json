@@ -1,1 +1,5 @@
-#secure docker daemon.json
+{
+    "icc": false,
+    "log-level": "info",
+    "iptables": true
+}
